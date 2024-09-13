@@ -11,21 +11,38 @@ namespace Backend.Service
         {
             _userRepository = userRepository;
         }
+
+        public Task<IEnumerable<User>> GetAllAsync()
+        {
+            return _userRepository.GetAllAsync();
+        }
+        public async Task<User?> LoginAsync(string email, string password)
+        {
+            var user = await _userRepository.FindByEmailAsync(email);
+            if (user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+            {
+                return user;
+            }
+            return null;
+        }
         public async Task<User> GetUserById(string id) =>
            await _userRepository.GetByIdAsync(id);
 
-        public async Task<User> RegisterUser(User user)
+        public Task<User> RegisterUser(User user)
         {
             user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
-            await _userRepository.CreateAsync(user);
-            return user;
+            return _userRepository.CreateAsync(user);
         }
 
-        public async Task<User> AuthenticateUser(string email, string password)
+        public Task UpdateUserAsync(string id, User user)
         {
-            var user = await _userRepository.GetAllAsync();
-            var authUser = user.FirstOrDefault(u => u.Email == email && BCrypt.Net.BCrypt.Verify(u.PasswordHash, password));
-            return authUser;
+            return _userRepository.UpdateAsync(id, user);
         }
+
+        public Task DeleteUserAsync(string id)
+        {
+            return _userRepository.DeleteAsync(id);
+        }
+
     }
 }

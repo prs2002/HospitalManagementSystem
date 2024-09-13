@@ -1,4 +1,5 @@
 ﻿using Backend.Models;
+using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 namespace Backend.Repositories
@@ -6,10 +7,13 @@ namespace Backend.Repositories
     public class ProviderRepo: IRepo<Provider>
     {
         private readonly IMongoCollection<Provider> _providers;
-        public ProviderRepo(IMongoClient mongoClient, string databaseName) 
+        private readonly MongoDbSettings _settings;
+        public ProviderRepo(IOptions<MongoDbSettings> settings) 
         {
-            var database = mongoClient.GetDatabase(databaseName);
-            _providers = database.GetCollection<Provider>("Providers");
+            _settings = settings.Value;
+            var client = new MongoClient(_settings.ConnectionString);
+            var database = client.GetDatabase(_settings.DatabaseName);
+            _providers = database.GetCollection<Provider>(_settings.ProvidersCollection);
         }
         public async Task<Provider> GetByIdAsync(string id) =>
             await _providers.Find(provider => provider.Id == id).FirstOrDefaultAsync();
@@ -17,9 +21,15 @@ namespace Backend.Repositories
         public async Task<IEnumerable<Provider>> GetAllAsync() =>
             await _providers.Find(provider => true).ToListAsync();
 
-        public async Task CreateAsync(Provider entity) =>
+        public async Task<Provider> CreateAsync(Provider entity)
+        {
             await _providers.InsertOneAsync(entity);
-
+            return entity;
+        }
+        public Task<Provider> FindByEmailAsync(string email)
+        {
+            return _providers.Find(c => c.Email == email).FirstOrDefaultAsync();
+        }
         public async Task UpdateAsync(string id, Provider entity) =>
             await _providers.ReplaceOneAsync(provider => provider.Id == id, entity);
 

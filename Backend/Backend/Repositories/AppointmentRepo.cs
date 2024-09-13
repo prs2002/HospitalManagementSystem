@@ -1,4 +1,5 @@
 ﻿using Backend.Models;
+using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 namespace Backend.Repositories
@@ -6,10 +7,14 @@ namespace Backend.Repositories
     public class AppointmentRepo: IRepo<Appointment>
     {
         private readonly IMongoCollection<Appointment> _appointments;
-        public AppointmentRepo(IMongoClient mongoClient, string databaseName)
+        private readonly MongoDbSettings _settings;
+
+        public AppointmentRepo(IOptions<MongoDbSettings> settings)
         {
-            var database = mongoClient.GetDatabase(databaseName);
-            _appointments = database.GetCollection<Appointment>("Appointments");
+            _settings = settings.Value;
+            var client = new MongoClient(_settings.ConnectionString);
+            var database = client.GetDatabase(_settings.DatabaseName);
+            _appointments = database.GetCollection<Appointment>(_settings.AppointmentsCollection);
         }
 
         public async Task<Appointment> GetByIdAsync(string id) =>
@@ -18,8 +23,16 @@ namespace Backend.Repositories
         public async Task<IEnumerable<Appointment>> GetAllAsync() =>
            await _appointments.Find(appointment => true).ToListAsync();
 
-        public async Task CreateAsync(Appointment entity) =>
+        public async Task<Appointment> CreateAsync(Appointment entity)
+        {
             await _appointments.InsertOneAsync(entity);
+            return entity;
+        }
+
+        public Task<Appointment> FindByEmailAsync(string email)
+        {
+            return Task.FromResult<Appointment>(null);
+        }
 
         public async Task UpdateAsync(string id, Appointment entity) =>
             await _appointments.ReplaceOneAsync(appointment => appointment.Id == id, entity);

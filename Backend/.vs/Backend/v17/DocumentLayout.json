@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|e:\\coding\\htmlcss\\heathcare prs\\backend\\backend\\repositories\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|solutionrelative:backend\\repositories\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|e:\\coding\\htmlcss\\heathcare prs\\backend\\backend\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|solutionrelative:backend\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|e:\\coding\\htmlcss\\heathcare prs\\backend\\backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|solutionrelative:backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|e:\\coding\\htmlcss\\heathcare prs\\backend\\backend\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|solutionrelative:backend\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,12 +23,12 @@
       "RelativeMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|solutionrelative:backend\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|e:\\coding\\htmlcss\\heathcare prs\\backend\\backend\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|solutionrelative:backend\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|e:\\coding\\htmlcss\\heathcare prs\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|e:\\coding\\htmlcss\\heathcare prs\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2B5854-6594-4949-80FF-853144B26ED1}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +38,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IRepo.cs",
+              "DocumentMoniker": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Repositories\\IRepo.cs",
+              "RelativeDocumentMoniker": "Backend\\Repositories\\IRepo.cs",
+              "ToolTip": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Repositories\\IRepo.cs",
+              "RelativeToolTip": "Backend\\Repositories\\IRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T03:30:18.461Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -38,54 +63,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserRepo.cs",
               "DocumentMoniker": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Repositories\\UserRepo.cs",
               "RelativeDocumentMoniker": "Backend\\Repositories\\UserRepo.cs",
               "ToolTip": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Repositories\\UserRepo.cs",
               "RelativeToolTip": "Backend\\Repositories\\UserRepo.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAswCQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T13:44:14.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Service\\IUserService.cs",
-              "RelativeDocumentMoniker": "Backend\\Service\\IUserService.cs",
-              "ToolTip": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Service\\IUserService.cs",
-              "RelativeToolTip": "Backend\\Service\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T13:43:57.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Service\\UserService.cs",
-              "RelativeDocumentMoniker": "Backend\\Service\\UserService.cs",
-              "ToolTip": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Service\\UserService.cs",
-              "RelativeToolTip": "Backend\\Service\\UserService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAwA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T13:43:27.153Z",
+              "WhenOpened": "2024-09-12T18:47:49.062Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "Backend\\Service\\UserService.cs",
+              "ToolTip": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Service\\UserService.cs",
+              "RelativeToolTip": "Backend\\Service\\UserService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T19:16:02.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\User.cs",
+              "ToolTip": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Models\\User.cs",
+              "RelativeToolTip": "Backend\\Models\\User.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAkwA8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T19:35:02.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Service\\IUserService.cs",
+              "RelativeDocumentMoniker": "Backend\\Service\\IUserService.cs",
+              "ToolTip": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Service\\IUserService.cs",
+              "RelativeToolTip": "Backend\\Service\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T18:17:37.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Backend\\Program.cs",
               "ToolTip": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Program.cs",
               "RelativeToolTip": "Backend\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAtAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-12T11:02:28.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\Coding\\htmlcss\\HeathCare prs\\Backend\\Backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAwwBYAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T18:37:42.617Z",
               "EditorCaption": ""
             }
           ]

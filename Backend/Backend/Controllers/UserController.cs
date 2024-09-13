@@ -1,5 +1,6 @@
 ﻿using Backend.Models;
 using Backend.Service;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers
@@ -15,22 +16,45 @@ namespace Backend.Controllers
             _userService = userService;
         }
 
-        [HttpPost("register")]
-        public async Task<IActionResult> Register(User user)
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            var createdUser = await _userService.RegisterUser(user);
-            return CreatedAtAction(nameof(GetUserById), new { id = createdUser.Id }, createdUser);
+            var users = await _userService.GetAllAsync();
+            return Ok(users);
+        }
+
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody]User user)
+        {
+            await _userService.RegisterUser(user);
+            return Ok("User registered successfully : " + user.Id);
+
         }
 
         [HttpPost("authenticate")]
-        public async Task<IActionResult> Authenticate(string email, string password)
+        public async Task<IActionResult> Authenticate([FromBody] LoginRequest loginRequest)
         {
-            var user = await _userService.AuthenticateUser(email, password);
-            if (user == null)
-                return Unauthorized();
+            var user = await _userService.LoginAsync(loginRequest.Email, loginRequest.Password);
+            if (user != null)
+            {
+                if (user.Id != null)
+                {
+                    HttpContext.Session.SetString("UserId", user.Id);
+                    HttpContext.Session.SetString("UserEmail", user.Email);
 
-            // Store user session if needed
-            return Ok(user);
+                    Console.WriteLine("Login successful");
+                    return Ok(new { Message = "Login successful", User = user });
+                }
+                else
+                {
+                    return BadRequest("User ID cannot be null");
+                }
+            }
+            else
+            {
+                return Unauthorized("Invalid credentials");
+            }
+
         }
 
         [HttpGet("{id}")]
